@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;&family=Agbalumo&family=Anton&family=Poppins&family=Vina+Sans&display=swap");
+* {
+  transition: 0.5s;
+}
+
+nav {
+  height: 80px;
+}
+
+.navbar-brand {
+  font-family: gabarito;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-family: gabarito;
+  font-size: 20px;
+}
+
+.dropdown-item {
+  font-family: gabarito;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.container-fluid {
+  z-index: 99;
+}
+
+/* darkmode */
+.darkmode {
+  padding: 10px 0px;
+}
+
+label {
+  position: relative;
+  width: 120px;
+  height: 60px; 
+  display: block;
+  background: url('../images/dark\ mode/images1.gif');
+  background-size: cover;
+  background-position: center;
+  border: 5px solid rgba(198, 247, 253, 0.3);
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: 1s ease;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+label::after {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  transition: 0.8s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label::before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 5px solid rgba(198, 247, 253, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  transition: 0.8s ease;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.18);
+}
+
+input:checked ~ label::after {
+  left: 80px;
+  background: #777ba5;
+}
+
+input:checked ~ label::before {
+  left: 80px;
+  border: 10px solid rgba(90, 79, 136, 0.2);
+}
+
+
+input:checked ~ label {
+  background: url('../images/dark\ mode/images2.gif');
+  background-size: cover;
+  background-position: center;
+  border: 10px solid rgba(90, 79, 136, 0.2);
+}
+
+input {
+  display: none;
+}
